@@ -14,7 +14,7 @@ public class CalculatorTest {
 
     @Test
     public void testSubtract(){
-        int expected = 5;
+        int expected = 4;
         int actual = calculator.subtract(5,1);
         assertEquals(expected, actual);
     }
