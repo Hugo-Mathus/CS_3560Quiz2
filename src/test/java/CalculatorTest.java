@@ -26,5 +26,12 @@ public class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testDivide(){
+        int expected = 2;
+        int actual = calculator.divide(8,4);
+        assertEquals(expected, actual);
+    }
+
 
 }
