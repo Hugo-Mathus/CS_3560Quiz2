@@ -9,7 +9,10 @@ public class Calculator {
         return x*y;
     }
     public int divide(int x, int y){
-
+        if (y==0){
+            throw new IllegalArgumentException("Ints can NOT be divided by zero");
+        }
         return x/y;
     }
+
 }
