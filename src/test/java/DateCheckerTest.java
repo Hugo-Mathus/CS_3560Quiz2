@@ -3,6 +3,7 @@ import org.junit.jupiter.params.provider.EnumSource;
 
 import java.util.Date;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DateCheckerTest {
@@ -13,5 +14,12 @@ public class DateCheckerTest {
             "AUGUST", "OCTOBER", "DECEMBER"})
     public void testHas31Days(DateChecker.Month month){
         assertTrue(dateChecker.has31Days(month));
+    }
+
+    @ParameterizedTest
+    @EnumSource(value = DateChecker.Month.class, names = {"FEBRUARY", "APRIL", "JUNE", "SEPTEMBER",
+            "NOVEMBER"})
+    public void testDoesNotHave31Days(DateChecker.Month month){
+        assertFalse(dateChecker.has31Days(month));
     }
 }
