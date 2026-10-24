@@ -55,6 +55,21 @@ public class CalculatorTest {
         int actual = calculator.multiply(3,4);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testMultiplyNegative() {
+        int expected = -12;
+        int actual = calculator.multiply(-3, 4);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testMultiplyZero() {
+        int expected = 0;
+        int actual = calculator.multiply(5, 0);
+        assertEquals(expected, actual);
+    }
+
 //DIVISION
     @Test
     public void testDivide(){
