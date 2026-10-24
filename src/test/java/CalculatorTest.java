@@ -14,6 +14,20 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSumNegative() {
+        int expected = -7;
+        int actual = calculator.sum(-3, -4);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSumZero() {
+        int expected = 5;
+        int actual = calculator.sum(5, 0);
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void testSubtract(){
         int expected = 4;
         int actual = calculator.subtract(5,1);
