@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
     Calculator calculator = new Calculator();
-
+//SUM
     @Test
     public void testSum(){
         int expected = 3;
@@ -26,7 +26,7 @@ public class CalculatorTest {
         int actual = calculator.sum(5, 0);
         assertEquals(expected, actual);
     }
-
+//SUBTRACION
     @Test
     public void testSubtract(){
         int expected = 4;
@@ -35,12 +35,27 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSubtractNegative() {
+        int expected = -3;
+        int actual = calculator.subtract(2, 5);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSubtractZero() {
+        int expected = 7;
+        int actual = calculator.subtract(7, 0);
+        assertEquals(expected, actual);
+    }
+
+//MULTIPLY
+    @Test
     public void testMultiply(){
         int expected = 12;
         int actual = calculator.multiply(3,4);
         assertEquals(expected, actual);
     }
-
+//DIVISION
     @Test
     public void testDivide(){
         int expected = 2;
